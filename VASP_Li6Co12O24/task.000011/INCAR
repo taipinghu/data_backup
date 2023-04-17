@@ -1,0 +1,36 @@
+SYSTEM = LiCoO2
+
+# Electronic Relaxtion
+NELM   = 600    # max step for SCF 
+ALGO   = All
+EDIFF  = 1e-06  # converge thresh
+ISMEAR = 0
+SIGMA  = 0.05
+PREC   = Normal
+ENCUT  = 600    # plane wave cutoff
+ISYM   = 0
+ISPIN  = 2      # spin-polarization
+NUPDOWN = 6
+LORBIT = 11
+NCORE = 4
+
+#GGA+U set up
+LDAU   = .TRUE.
+LDAUTYPE = 2
+LDAUL  = -1 2 -1 
+LDAUU  = 0 5.14 0 
+LDAUJ  = 0 0 0
+
+# vdW
+IVDW = 1
+
+# MD set up 
+IBRION = -1      # =0 means MD
+NSW    = 0       # Single point calculation
+# output options
+LWAVE    = .FALSE.
+LCHARG   = .FALSE.
+LREAL    = Auto
+
+KSPACING = 0.250000
+KGAMMA   = .FALSE.
